@@ -1,7 +1,7 @@
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Footer from "./_components/Footer";
+import Navbar from "./_components/Navbar";
 import "@/app/globals.css";
-function RootLayout({ children }) {
+function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <html>
