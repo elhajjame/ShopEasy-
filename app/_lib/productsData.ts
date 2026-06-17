@@ -3,8 +3,9 @@ interface Rating {
   count: number;
 }
 
-interface ProductsData {
+export interface Products {
   id: number;
+  badge: string;
   title: string;
   price: number;
   description: string;
@@ -13,7 +14,7 @@ interface ProductsData {
   rating: Rating;
 }
 
-const ProductsData: ProductsData[] = [
+export const ProductsData: Products[] = [
   {
     id: 1,
     title: "Apple MacBook Air M3",
@@ -21,6 +22,7 @@ const ProductsData: ProductsData[] = [
     description:
       "Lightweight laptop powered by the M3 chip with exceptional battery life.",
     category: "laptops",
+    badge: "new",
     image: "https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=500",
     rating: {
       rate: 4.9,
@@ -30,6 +32,7 @@ const ProductsData: ProductsData[] = [
   {
     id: 2,
     title: "Samsung Galaxy S25 Ultra",
+    badge: "Best seller",
     price: 1399.99,
     description:
       "Flagship smartphone featuring a powerful camera system and premium design.",
@@ -43,6 +46,7 @@ const ProductsData: ProductsData[] = [
   {
     id: 3,
     title: "Sony WH-1000XM6",
+    badge: "New",
     price: 399.99,
     description:
       "Premium noise-canceling headphones with immersive sound quality.",
@@ -56,6 +60,7 @@ const ProductsData: ProductsData[] = [
   {
     id: 4,
     title: "Apple iPad Pro",
+    badge: "Best seller",
     price: 1199.99,
     description:
       "Powerful tablet with stunning display and professional performance.",
@@ -69,6 +74,7 @@ const ProductsData: ProductsData[] = [
   {
     id: 5,
     title: "Logitech MX Master 3S",
+    badge: "new",
     price: 99.99,
     description:
       "Advanced productivity mouse with ergonomic design and silent clicks.",
@@ -82,6 +88,8 @@ const ProductsData: ProductsData[] = [
   {
     id: 6,
     title: "Dell UltraSharp 32 4K",
+    badge: "new",
+
     price: 799.99,
     description:
       "Professional 4K monitor with accurate colors and USB-C connectivity.",
@@ -95,6 +103,8 @@ const ProductsData: ProductsData[] = [
   {
     id: 7,
     title: "Keychron Q1 Max",
+    badge: "new",
+
     price: 219.99,
     description:
       "Premium mechanical keyboard with wireless connectivity and RGB lighting.",
@@ -108,6 +118,7 @@ const ProductsData: ProductsData[] = [
   {
     id: 8,
     title: "GoPro HERO13 Black",
+    badge: "new",
     price: 449.99,
     description:
       "Compact action camera capable of recording stunning high-resolution videos.",
