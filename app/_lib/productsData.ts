@@ -7,17 +7,18 @@ export interface Products {
   id: number;
   badge: string;
   title: string;
+  slug: string;
   price: number;
   description: string;
   category: string;
   image: string;
   rating: Rating;
 }
-
 export const ProductsData: Products[] = [
   {
     id: 1,
     title: "Apple MacBook Air M3",
+    slug: "apple-macbook-air-m3",
     price: 1299.99,
     description:
       "Lightweight laptop powered by the M3 chip with exceptional battery life.",
@@ -32,6 +33,7 @@ export const ProductsData: Products[] = [
   {
     id: 2,
     title: "Samsung Galaxy S25 Ultra",
+    slug: "samsung-galaxy-s25-ultra",
     badge: "Best seller",
     price: 1399.99,
     description:
@@ -46,6 +48,7 @@ export const ProductsData: Products[] = [
   {
     id: 3,
     title: "Sony WH-1000XM6",
+    slug: "sony-wh-1000xm6",
     badge: "New",
     price: 399.99,
     description:
@@ -60,6 +63,7 @@ export const ProductsData: Products[] = [
   {
     id: 4,
     title: "Apple iPad Pro",
+    slug: "apple-ipad-pro",
     badge: "Best seller",
     price: 1199.99,
     description:
@@ -74,6 +78,7 @@ export const ProductsData: Products[] = [
   {
     id: 5,
     title: "Logitech MX Master 3S",
+    slug: "logitech-mx-master-3s",
     badge: "new",
     price: 99.99,
     description:
@@ -88,8 +93,8 @@ export const ProductsData: Products[] = [
   {
     id: 6,
     title: "Dell UltraSharp 32 4K",
+    slug: "dell-ultrasharp-32-4k",
     badge: "new",
-
     price: 799.99,
     description:
       "Professional 4K monitor with accurate colors and USB-C connectivity.",
@@ -103,8 +108,8 @@ export const ProductsData: Products[] = [
   {
     id: 7,
     title: "Keychron Q1 Max",
+    slug: "keychron-q1-max",
     badge: "new",
-
     price: 219.99,
     description:
       "Premium mechanical keyboard with wireless connectivity and RGB lighting.",
@@ -118,6 +123,7 @@ export const ProductsData: Products[] = [
   {
     id: 8,
     title: "GoPro HERO13 Black",
+    slug: "gopro-hero13-black",
     badge: "new",
     price: 449.99,
     description:
