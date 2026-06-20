@@ -1,14 +1,16 @@
+"use client";
 import { ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import { Products } from "../_lib/productsData";
 import Link from "next/link";
+import AddToCart from "./AddToCart";
 interface ProductCardProps {
   product: Products;
 }
 function ProductCard({ product }: ProductCardProps) {
   return (
-    <Link href={`/products/${product.slug}`}>
-      <div className="group relative flex flex-col bg-[#111827] border border-[#374151] rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:border-primary-accent/40 hover:shadow-[0_12px_30px_rgba(0,0,0,0.5)]">
+    <div className="group relative flex flex-col bg-[#111827] border border-[#374151] rounded-3xl overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:border-primary-accent/40 hover:shadow-[0_12px_30px_rgba(0,0,0,0.5)]">
+      <Link href={`/products/${product.slug}`}>
         <span className="bg-[#3b82f6]  absolute top-6 left-6 z-10 rounded-full bg-primary-accent text-white text-[9px] font-bold px-3 py-1 uppercase tracking-widest shadow-md">
           {product.badge}
         </span>
@@ -32,7 +34,7 @@ function ProductCard({ product }: ProductCardProps) {
             </div>
 
             <span className="text-[#9CA3AF] font-mono text-lg shrink-0 mt-1">
-              $299
+              {product.price}
             </span>
           </div>
 
@@ -46,16 +48,14 @@ function ProductCard({ product }: ProductCardProps) {
                 {product.rating.rate}
               </span>
 
-              <span className="text-[10px] text-[#9CA3AF]">(120)</span>
+              <span className="text-[10px] text-[#9CA3AF]">
+                ({product.rating.count})
+              </span>
             </div>
-
-            <button className="cursor-pointer bg-[#3b82f6] inline-flex items-center justify-center rounded-full p-2.5 bg-primary-accent text-white hover:bg-primary-accent-hover active:scale-90 transition-all duration-300 shadow-[0_4px_12px_rgba(59,130,246,0.2)]">
-              <ShoppingBag strokeWidth={1} />
-            </button>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 

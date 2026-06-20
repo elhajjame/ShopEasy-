@@ -44,7 +44,6 @@ export default function Page({ params }: PageProps) {
 
         <div className="text-white text-2xl font-bold">${product.price}</div>
 
-        {/* Add to cart component */}
         <AddToCart product={product} />
       </div>
     </div>

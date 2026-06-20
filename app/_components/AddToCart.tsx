@@ -17,7 +17,7 @@ export default function AddToCart({ product }: ProductProps) {
   const dec = () => setQuantity((prev) => Math.max(1, prev - 1));
 
   const totalPrice = product.price * quantity;
-  console.log(product);
+
   return (
     <div className="space-y-4">
       {/* Quantity Controls */}
@@ -39,12 +39,11 @@ export default function AddToCart({ product }: ProductProps) {
         </button>
       </div>
 
-      {/* Add to cart */}
       <button
         onClick={() => addToCart(product, quantity)}
-        className="w-full bg-blue-500 text-white py-3 rounded-full"
+        className="cursor-pointer w-full bg-blue-500 text-white py-3 rounded-full"
       >
-        Add To Cart — ${totalPrice}
+        Add To Cart — {totalPrice} DHs
       </button>
     </div>
   );

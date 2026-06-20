@@ -20,6 +20,9 @@ function Navbar() {
           <Link href="/cart">
             <ShoppingBag strokeWidth={1} />
           </Link>
+          <span className="absolute -top-1 -right-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#3B82F6] text-[9px] font-bold text-white ring-1 ring-[#0A0A0A] animate-pulse">
+            
+          </span>
         </div>
       </div>
     </header>
