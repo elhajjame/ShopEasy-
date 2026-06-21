@@ -1,28 +1,36 @@
+"use client";
 import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
+  const pathname = usePathname();
   return (
     <header className="sticky top-0 z-40 w-full border-b border-[#374151] bg-[#0A0A0A]/85 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
-          className="font-sans text-xl font-bold tracking-tighter uppercase text-white"
           href="/"
+          className={`font-sans text-xl font-bold tracking-tighter uppercase ${
+            pathname === "/" ? "text-blue-500" : "text-white"
+          }`}
         >
           Easy Shop
         </Link>
         <ul className="flex gap-4">
           <li className="transition-all pb-1 cursor-pointer hover:text-[#F9FAFB] text-[#9CA3AF]">
-            <Link href="/products">Products</Link>
+            <Link
+              className={`${pathname === "/products" ? "border-b-2 border-[#3B82F6]" : "text-white"}`}
+              href="/products"
+            >
+              Products
+            </Link>
           </li>
         </ul>
         <div className="group relative rounded-full p-2.5 text-[#9CA3AF] bg-[#111827] border border-[#374151] hover:text-[#F9FAFB] hover:bg-[#1F2937] transition-all cursor-pointer flex items-center justify-center">
           <Link href="/cart">
             <ShoppingBag strokeWidth={1} />
           </Link>
-          <span className="absolute -top-1 -right-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#3B82F6] text-[9px] font-bold text-white ring-1 ring-[#0A0A0A] animate-pulse">
-            
-          </span>
+          <span className="absolute -top-1 -right-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#3B82F6] text-[9px] font-bold text-white ring-1 ring-[#0A0A0A] animate-pulse"></span>
         </div>
       </div>
     </header>

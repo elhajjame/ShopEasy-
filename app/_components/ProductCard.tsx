@@ -1,9 +1,7 @@
 "use client";
-import { ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import { Products } from "../_lib/productsData";
 import Link from "next/link";
-import AddToCart from "./AddToCart";
 interface ProductCardProps {
   product: Products;
 }
